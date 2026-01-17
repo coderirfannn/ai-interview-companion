@@ -1,0 +1,316 @@
+{
+  "resources": [
+    {
+      "role": "sde",
+      "difficulty": "easy",
+      "title": "Introduction to Data Structures",
+      "description": "Learn the fundamentals of arrays, linked lists, stacks, and queues.",
+      "resource_type": "article",
+      "url": "https://www.geeksforgeeks.org/data-structures/"
+    },
+    {
+      "role": "sde",
+      "difficulty": "easy",
+      "title": "Git Basics Tutorial",
+      "description": "Master version control with this comprehensive Git guide.",
+      "resource_type": "tutorial",
+      "url": "https://git-scm.com/book/en/v2"
+    },
+    {
+      "role": "sde",
+      "difficulty": "easy",
+      "title": "Object-Oriented Programming Concepts",
+      "description": "Understand OOP principles with practical examples.",
+      "resource_type": "video",
+      "url": "https://www.youtube.com/watch?v=pTB0EiLXUC8"
+    },
+    {
+      "role": "sde",
+      "difficulty": "easy",
+      "title": "RESTful API Design Guide",
+      "description": "Best practices for designing clean and intuitive APIs.",
+      "resource_type": "article",
+      "url": "https://restfulapi.net/"
+    },
+    {
+      "role": "sde",
+      "difficulty": "easy",
+      "title": "SQL Fundamentals",
+      "description": "Learn SQL basics for database querying and management.",
+      "resource_type": "tutorial",
+      "url": "https://www.w3schools.com/sql/"
+    },
+    {
+      "role": "sde",
+      "difficulty": "medium",
+      "title": "Design Patterns in Software Engineering",
+      "description": "Master common design patterns used in professional software development.",
+      "resource_type": "book",
+      "url": "https://refactoring.guru/design-patterns"
+    },
+    {
+      "role": "sde",
+      "difficulty": "medium",
+      "title": "System Design Interview Prep",
+      "description": "Comprehensive guide to system design concepts and interview strategies.",
+      "resource_type": "course",
+      "url": "https://www.educative.io/courses/grokking-the-system-design-interview"
+    },
+    {
+      "role": "sde",
+      "difficulty": "medium",
+      "title": "Microservices Architecture",
+      "description": "Learn how to design and implement microservices-based applications.",
+      "resource_type": "article",
+      "url": "https://microservices.io/"
+    },
+    {
+      "role": "sde",
+      "difficulty": "medium",
+      "title": "Database Optimization Techniques",
+      "description": "Advanced techniques for optimizing database performance.",
+      "resource_type": "tutorial",
+      "url": "https://use-the-index-luke.com/"
+    },
+    {
+      "role": "sde",
+      "difficulty": "medium",
+      "title": "Concurrency and Multithreading",
+      "description": "Deep dive into concurrent programming patterns and pitfalls.",
+      "resource_type": "video",
+      "url": "https://www.youtube.com/watch?v=olYdb0DdGtM"
+    },
+    {
+      "role": "sde",
+      "difficulty": "hard",
+      "title": "Distributed Systems Fundamentals",
+      "description": "MIT course on distributed systems principles and practices.",
+      "resource_type": "course",
+      "url": "https://pdos.csail.mit.edu/6.824/"
+    },
+    {
+      "role": "sde",
+      "difficulty": "hard",
+      "title": "Building Scalable Systems",
+      "description": "Real-world case studies of large-scale system architecture.",
+      "resource_type": "book",
+      "url": "https://dataintensive.net/"
+    },
+    {
+      "role": "sde",
+      "difficulty": "hard",
+      "title": "Advanced Algorithm Design",
+      "description": "Complex algorithmic techniques for competitive programming.",
+      "resource_type": "course",
+      "url": "https://codeforces.com/edu/courses"
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "easy",
+      "title": "Introduction to ETL Concepts",
+      "description": "Learn the basics of Extract, Transform, Load processes.",
+      "resource_type": "article",
+      "url": "https://www.talend.com/resources/what-is-etl/"
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "easy",
+      "title": "SQL for Data Engineers",
+      "description": "SQL techniques specifically for data engineering tasks.",
+      "resource_type": "tutorial",
+      "url": "https://mode.com/sql-tutorial/"
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "easy",
+      "title": "Apache Kafka Basics",
+      "description": "Getting started with event streaming using Kafka.",
+      "resource_type": "video",
+      "url": "https://www.youtube.com/watch?v=06iRM1Ghr1k"
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "easy",
+      "title": "Data Warehouse Concepts",
+      "description": "Understanding data warehousing fundamentals and design.",
+      "resource_type": "article",
+      "url": "https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/"
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "easy",
+      "title": "Python for Data Engineering",
+      "description": "Python programming basics for data pipeline development.",
+      "resource_type": "course",
+      "url": "https://realpython.com/"
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "medium",
+      "title": "Apache Spark Deep Dive",
+      "description": "Advanced Spark programming for big data processing.",
+      "resource_type": "course",
+      "url": "https://spark.apache.org/docs/latest/"
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "medium",
+      "title": "Data Pipeline Design Patterns",
+      "description": "Best practices for building robust data pipelines.",
+      "resource_type": "book",
+      "url": "https://www.oreilly.com/library/view/data-pipelines-pocket/9781492087823/"
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "medium",
+      "title": "Apache Airflow Mastery",
+      "description": "Complete guide to workflow orchestration with Airflow.",
+      "resource_type": "tutorial",
+      "url": "https://airflow.apache.org/docs/"
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "medium",
+      "title": "Stream Processing with Flink",
+      "description": "Real-time data processing using Apache Flink.",
+      "resource_type": "course",
+      "url": "https://flink.apache.org/learn/"
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "medium",
+      "title": "Data Quality Frameworks",
+      "description": "Implementing data quality checks and monitoring.",
+      "resource_type": "article",
+      "url": "https://greatexpectations.io/expectations/"
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "hard",
+      "title": "Building Data Lakes at Scale",
+      "description": "Architecture patterns for petabyte-scale data lakes.",
+      "resource_type": "book",
+      "url": "https://delta.io/"
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "hard",
+      "title": "Real-Time Analytics Architecture",
+      "description": "Designing systems for sub-second analytics queries.",
+      "resource_type": "course",
+      "url": "https://www.confluent.io/resources/"
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "hard",
+      "title": "Data Mesh Implementation Guide",
+      "description": "Practical guide to implementing data mesh architecture.",
+      "resource_type": "book",
+      "url": "https://www.oreilly.com/library/view/data-mesh/9781492092384/"
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "easy",
+      "title": "Cloud Computing Fundamentals",
+      "description": "Introduction to cloud concepts and service models.",
+      "resource_type": "course",
+      "url": "https://cloud.google.com/training/cloud-infrastructure"
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "easy",
+      "title": "Docker Getting Started",
+      "description": "Learn containerization basics with Docker.",
+      "resource_type": "tutorial",
+      "url": "https://docs.docker.com/get-started/"
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "easy",
+      "title": "Linux Basics for Cloud",
+      "description": "Essential Linux commands for cloud engineers.",
+      "resource_type": "tutorial",
+      "url": "https://linuxjourney.com/"
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "easy",
+      "title": "Networking Fundamentals",
+      "description": "Understanding networking concepts for cloud environments.",
+      "resource_type": "video",
+      "url": "https://www.youtube.com/watch?v=qiQR5rTSshw"
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "easy",
+      "title": "Introduction to Terraform",
+      "description": "Getting started with Infrastructure as Code.",
+      "resource_type": "tutorial",
+      "url": "https://learn.hashicorp.com/terraform"
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "medium",
+      "title": "Kubernetes Administration",
+      "description": "Complete guide to managing Kubernetes clusters.",
+      "resource_type": "course",
+      "url": "https://kubernetes.io/docs/tutorials/"
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "medium",
+      "title": "Cloud Security Best Practices",
+      "description": "Implementing security in cloud environments.",
+      "resource_type": "article",
+      "url": "https://www.cisecurity.org/controls"
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "medium",
+      "title": "CI/CD Pipeline Design",
+      "description": "Building effective continuous integration and deployment pipelines.",
+      "resource_type": "tutorial",
+      "url": "https://www.atlassian.com/continuous-delivery"
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "medium",
+      "title": "Monitoring and Observability",
+      "description": "Implementing comprehensive monitoring for cloud applications.",
+      "resource_type": "book",
+      "url": "https://www.oreilly.com/library/view/observability-engineering/9781492076438/"
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "medium",
+      "title": "High Availability Architecture",
+      "description": "Designing fault-tolerant cloud applications.",
+      "resource_type": "course",
+      "url": "https://aws.amazon.com/architecture/well-architected/"
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "hard",
+      "title": "Multi-Cloud Architecture",
+      "description": "Strategies for deploying across multiple cloud providers.",
+      "resource_type": "book",
+      "url": "https://www.oreilly.com/library/view/cloud-native-infrastructure/9781491984291/"
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "hard",
+      "title": "Platform Engineering",
+      "description": "Building internal developer platforms for enterprise.",
+      "resource_type": "article",
+      "url": "https://platformengineering.org/"
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "hard",
+      "title": "Chaos Engineering Principles",
+      "description": "Building resilient systems through controlled experiments.",
+      "resource_type": "book",
+      "url": "https://principlesofchaos.org/"
+    }
+  ]
+}
