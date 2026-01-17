@@ -55,7 +55,7 @@ Only return the JSON array, no additional text.`;
     const userMessage = `Generate 5 ${difficulty} level interview questions for a ${roleLabels[role]} position.`;
 
     // Call Google Gemini API directly
-    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GOOGLE_GEMINI_API_KEY}`, {
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GOOGLE_GEMINI_API_KEY}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
