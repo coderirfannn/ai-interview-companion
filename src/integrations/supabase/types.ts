@@ -141,6 +141,39 @@ export type Database = {
         }
         Relationships: []
       }
+      learning_resources: {
+        Row: {
+          created_at: string
+          description: string
+          difficulty: Database["public"]["Enums"]["interview_difficulty"]
+          id: string
+          resource_type: string
+          role: Database["public"]["Enums"]["interview_role"]
+          title: string
+          url: string | null
+        }
+        Insert: {
+          created_at?: string
+          description: string
+          difficulty: Database["public"]["Enums"]["interview_difficulty"]
+          id?: string
+          resource_type?: string
+          role: Database["public"]["Enums"]["interview_role"]
+          title: string
+          url?: string | null
+        }
+        Update: {
+          created_at?: string
+          description?: string
+          difficulty?: Database["public"]["Enums"]["interview_difficulty"]
+          id?: string
+          resource_type?: string
+          role?: Database["public"]["Enums"]["interview_role"]
+          title?: string
+          url?: string | null
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           avatar_url: string | null
@@ -162,6 +195,72 @@ export type Database = {
           full_name?: string | null
           id?: string
           updated_at?: string
+        }
+        Relationships: []
+      }
+      question_bank: {
+        Row: {
+          created_at: string
+          difficulty: Database["public"]["Enums"]["interview_difficulty"]
+          expected_keywords: string[]
+          id: string
+          ideal_answer_length: number
+          question_text: string
+          role: Database["public"]["Enums"]["interview_role"]
+          scoring_rubric: Json | null
+        }
+        Insert: {
+          created_at?: string
+          difficulty: Database["public"]["Enums"]["interview_difficulty"]
+          expected_keywords?: string[]
+          id?: string
+          ideal_answer_length?: number
+          question_text: string
+          role: Database["public"]["Enums"]["interview_role"]
+          scoring_rubric?: Json | null
+        }
+        Update: {
+          created_at?: string
+          difficulty?: Database["public"]["Enums"]["interview_difficulty"]
+          expected_keywords?: string[]
+          id?: string
+          ideal_answer_length?: number
+          question_text?: string
+          role?: Database["public"]["Enums"]["interview_role"]
+          scoring_rubric?: Json | null
+        }
+        Relationships: []
+      }
+      user_progress: {
+        Row: {
+          created_at: string
+          id: string
+          total_interviews: number
+          total_score: number | null
+          updated_at: string
+          used_question_ids: string[]
+          used_resource_ids: string[]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          total_interviews?: number
+          total_score?: number | null
+          updated_at?: string
+          used_question_ids?: string[]
+          used_resource_ids?: string[]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          total_interviews?: number
+          total_score?: number | null
+          updated_at?: string
+          used_question_ids?: string[]
+          used_resource_ids?: string[]
+          user_id?: string
         }
         Relationships: []
       }
