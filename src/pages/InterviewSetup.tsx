@@ -95,16 +95,29 @@ export default function InterviewSetup() {
         }
       );
 
-      if (questionsError) throw questionsError;
+       if (questionsError) {
+         // Try to extract the JSON error returned by the function
+         const ctx: any = (questionsError as any).context;
+         let msg = questionsError.message;
+         if (ctx?.body) {
+           try {
+             const parsed = typeof ctx.body === 'string' ? JSON.parse(ctx.body) : ctx.body;
+             if (parsed?.error) msg = parsed.error;
+           } catch {
+             // ignore parse failures
+           }
+         }
+         throw new Error(msg);
+       }
 
-      toast.success('Interview started!');
-      navigate(`/interview/${interview.id}`);
-    } catch (error) {
-      console.error('Error starting interview:', error);
-      toast.error('Failed to start interview. Please try again.');
-    } finally {
-      setIsLoading(false);
-    }
+       toast.success('Interview started!');
+       navigate(`/interview/${interview.id}`);
+     } catch (error) {
+       console.error('Error starting interview:', error);
+       toast.error(error instanceof Error ? error.message : 'Failed to start interview. Please try again.');
+     } finally {
+       setIsLoading(false);
+     }
   };
 
   return (
