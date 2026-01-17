@@ -79,10 +79,25 @@ Only return the JSON array, no additional text.`;
     if (!response.ok) {
       const errorText = await response.text();
       console.error('Google Gemini API error:', response.status, errorText);
-      if (response.status === 429) {
-        throw new Error('Rate limit exceeded. Please wait a moment and try again.');
+
+      // Try to surface the upstream error message
+      let upstreamMessage = '';
+      try {
+        const parsed = JSON.parse(errorText);
+        upstreamMessage = parsed?.error?.message ?? '';
+      } catch {
+        upstreamMessage = errorText;
       }
-      throw new Error(`Google Gemini API error: ${response.status}`);
+
+      const isQuota = response.status === 429;
+      const message = isQuota
+        ? 'Gemini quota/rate limit exceeded for this API key/project. Enable billing/quota in Google AI Studio or use a different key, then try again.'
+        : `Google Gemini API error: ${response.status}`;
+
+      return new Response(
+        JSON.stringify({ error: message, upstreamMessage }),
+        { status: response.status, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
     }
 
     const data = await response.json();
@@ -118,8 +133,9 @@ Only return the JSON array, no additional text.`;
 
   } catch (error: unknown) {
     console.error('Error in generate-questions:', error);
+    const message = error instanceof Error ? error.message : 'Unknown error';
     return new Response(
-      JSON.stringify({ error: error instanceof Error ? error.message : 'Unknown error' }),
+      JSON.stringify({ error: message }),
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
   }
