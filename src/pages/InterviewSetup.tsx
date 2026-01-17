@@ -83,9 +83,9 @@ export default function InterviewSetup() {
 
       if (interviewError) throw interviewError;
 
-      // Generate questions using AI edge function
+      // Get questions from JSON-based question bank (no AI)
       const { data: questionsData, error: questionsError } = await supabase.functions.invoke(
-        'generate-questions',
+        'start-interview',
         {
           body: { 
             role: selectedRole, 

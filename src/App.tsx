@@ -15,6 +15,7 @@ import InterviewSession from "./pages/InterviewSession";
 import InterviewResults from "./pages/InterviewResults";
 import Analytics from "./pages/Analytics";
 import Profile from "./pages/Profile";
+import Resources from "./pages/Resources";
 import Admin from "./pages/Admin";
 import AdminUsers from "./pages/AdminUsers";
 import NotFound from "./pages/NotFound";
@@ -79,6 +80,14 @@ const App = () => (
               element={
                 <ProtectedRoute>
                   <Profile />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/resources"
+              element={
+                <ProtectedRoute>
+                  <Resources />
                 </ProtectedRoute>
               }
             />

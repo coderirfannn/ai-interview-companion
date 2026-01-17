@@ -214,23 +214,14 @@ export default function InterviewSession() {
 
     setIsSubmitting(true);
     try {
-      // Analyze all answers with AI
-      const { error: analyzeError } = await supabase.functions.invoke('analyze-answers', {
+      // Score answers using rule-based system (no AI)
+      const { error: scoreError } = await supabase.functions.invoke('score-answer', {
         body: { interviewId: id },
       });
 
-      if (analyzeError) throw analyzeError;
+      if (scoreError) throw scoreError;
 
-      // Update interview status
-      await supabase
-        .from('interviews')
-        .update({ 
-          status: 'completed',
-          completed_at: new Date().toISOString(),
-        })
-        .eq('id', id);
-
-      toast.success('Interview completed! Analyzing your answers...');
+      toast.success('Interview completed! Calculating your scores...');
       navigate(`/interview/${id}/results`);
     } catch (error) {
       console.error('Error submitting interview:', error);
