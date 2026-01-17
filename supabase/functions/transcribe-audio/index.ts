@@ -17,15 +17,11 @@ serve(async (req) => {
       throw new Error('No audio data provided');
     }
 
-    const LOVABLE_API_KEY = Deno.env.get('LOVABLE_API_KEY');
-    if (!LOVABLE_API_KEY) {
-      throw new Error('LOVABLE_API_KEY is not configured');
+    const GOOGLE_GEMINI_API_KEY = Deno.env.get('GOOGLE_GEMINI_API_KEY');
+    if (!GOOGLE_GEMINI_API_KEY) {
+      throw new Error('GOOGLE_GEMINI_API_KEY is not configured');
     }
 
-    // For transcription, we'll use the AI to describe/transcribe the audio content
-    // Since we're using base64 audio, we'll simulate transcription with a text analysis
-    // In production, you'd integrate with a dedicated speech-to-text service
-    
     // Decode base64 to check if it's valid audio
     try {
       const binaryData = Uint8Array.from(atob(audio), c => c.charCodeAt(0));
@@ -35,40 +31,45 @@ serve(async (req) => {
       throw new Error('Invalid audio data format');
     }
 
-    // Use Lovable AI for a mock transcription response
-    // In a real implementation, you'd use a proper speech-to-text API
-    const response = await fetch('https://ai.gateway.lovable.dev/v1/chat/completions', {
+    // Use Google Gemini for a mock transcription response
+    // In a real implementation, you'd use Google Cloud Speech-to-Text API
+    const prompt = `You are simulating a speech-to-text transcription system for a technical interview practice app.
+Generate a realistic technical interview answer transcript that would be spoken in about 30-60 seconds.
+The answer should sound natural with some filler words (um, uh, like) but remain professional.
+Only return the transcript text, no additional commentary.
+
+Generate a realistic spoken interview answer transcript.`;
+
+    // Call Google Gemini API directly
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GOOGLE_GEMINI_API_KEY}`, {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${LOVABLE_API_KEY}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'google/gemini-3-flash-preview',
-        messages: [
-          { 
-            role: 'system', 
-            content: `You are simulating a speech-to-text transcription system for a technical interview practice app.
-Generate a realistic technical interview answer transcript that would be spoken in about 30-60 seconds.
-The answer should sound natural with some filler words (um, uh, like) but remain professional.
-Only return the transcript text, no additional commentary.` 
-          },
-          { 
-            role: 'user', 
-            content: 'Generate a realistic spoken interview answer transcript.' 
+        contents: [
+          {
+            role: 'user',
+            parts: [{ text: prompt }]
           }
         ],
+        generationConfig: {
+          temperature: 0.8,
+          topK: 40,
+          topP: 0.95,
+          maxOutputTokens: 512,
+        },
       }),
     });
 
     if (!response.ok) {
       const errorText = await response.text();
-      console.error('AI gateway error:', response.status, errorText);
+      console.error('Google Gemini API error:', response.status, errorText);
       throw new Error(`Transcription failed: ${response.status}`);
     }
 
     const data = await response.json();
-    const transcript = data.choices[0].message.content.trim();
+    const transcript = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || '';
 
     return new Response(
       JSON.stringify({ text: transcript }),
