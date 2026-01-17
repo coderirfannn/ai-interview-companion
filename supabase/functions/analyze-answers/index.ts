@@ -14,9 +14,9 @@ serve(async (req) => {
   try {
     const { interviewId } = await req.json();
     
-    const LOVABLE_API_KEY = Deno.env.get('LOVABLE_API_KEY');
-    if (!LOVABLE_API_KEY) {
-      throw new Error('LOVABLE_API_KEY is not configured');
+    const GOOGLE_GEMINI_API_KEY = Deno.env.get('GOOGLE_GEMINI_API_KEY');
+    if (!GOOGLE_GEMINI_API_KEY) {
+      throw new Error('GOOGLE_GEMINI_API_KEY is not configured');
     }
 
     const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
@@ -44,8 +44,12 @@ serve(async (req) => {
 
       const answerText = answer.answer_text || answer.transcript || '';
       
-      const systemPrompt = `You are an expert technical interviewer providing feedback on interview answers.
+      const prompt = `You are an expert technical interviewer providing feedback on interview answers.
 Analyze the following answer and provide structured feedback.
+
+Question: ${question.question_text}
+
+Answer: ${answerText}
 
 Return a JSON object with this exact format:
 {
@@ -60,34 +64,35 @@ Return a JSON object with this exact format:
 
 Be constructive but honest. Only return the JSON, no additional text.`;
 
-      const userPrompt = `Question: ${question.question_text}
-
-Answer: ${answerText}
-
-Analyze this technical interview answer.`;
-
-      const response = await fetch('https://ai.gateway.lovable.dev/v1/chat/completions', {
+      // Call Google Gemini API directly
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GOOGLE_GEMINI_API_KEY}`, {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${LOVABLE_API_KEY}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          model: 'google/gemini-3-flash-preview',
-          messages: [
-            { role: 'system', content: systemPrompt },
-            { role: 'user', content: userPrompt }
+          contents: [
+            {
+              role: 'user',
+              parts: [{ text: prompt }]
+            }
           ],
+          generationConfig: {
+            temperature: 0.3,
+            topK: 40,
+            topP: 0.95,
+            maxOutputTokens: 1024,
+          },
         }),
       });
 
       if (!response.ok) {
-        console.error('AI gateway error for question:', question.id);
+        console.error('Google Gemini API error for question:', question.id, response.status);
         continue;
       }
 
       const data = await response.json();
-      let feedbackText = data.choices[0].message.content;
+      let feedbackText = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
       feedbackText = feedbackText.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
       
       let feedback;
