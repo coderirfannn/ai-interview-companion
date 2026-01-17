@@ -79,6 +79,9 @@ Only return the JSON array, no additional text.`;
     if (!response.ok) {
       const errorText = await response.text();
       console.error('Google Gemini API error:', response.status, errorText);
+      if (response.status === 429) {
+        throw new Error('Rate limit exceeded. Please wait a moment and try again.');
+      }
       throw new Error(`Google Gemini API error: ${response.status}`);
     }
 
