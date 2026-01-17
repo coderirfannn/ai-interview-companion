@@ -1,0 +1,739 @@
+{
+  "questions": [
+    {
+      "role": "sde",
+      "difficulty": "easy",
+      "question_text": "What is the difference between an array and a linked list?",
+      "expected_keywords": ["memory", "contiguous", "pointer", "access", "insertion", "deletion"],
+      "ideal_answer_length": 150
+    },
+    {
+      "role": "sde",
+      "difficulty": "easy",
+      "question_text": "Explain what a stack data structure is and give a real-world example.",
+      "expected_keywords": ["LIFO", "push", "pop", "last in first out", "undo", "browser history"],
+      "ideal_answer_length": 120
+    },
+    {
+      "role": "sde",
+      "difficulty": "easy",
+      "question_text": "What is the purpose of version control systems like Git?",
+      "expected_keywords": ["tracking", "collaboration", "history", "branches", "merge", "commits"],
+      "ideal_answer_length": 130
+    },
+    {
+      "role": "sde",
+      "difficulty": "easy",
+      "question_text": "Describe the difference between HTTP GET and POST requests.",
+      "expected_keywords": ["retrieve", "submit", "body", "URL", "parameters", "idempotent"],
+      "ideal_answer_length": 140
+    },
+    {
+      "role": "sde",
+      "difficulty": "easy",
+      "question_text": "What is an API and why are APIs important in software development?",
+      "expected_keywords": ["interface", "communication", "integration", "endpoints", "request", "response"],
+      "ideal_answer_length": 130
+    },
+    {
+      "role": "sde",
+      "difficulty": "easy",
+      "question_text": "Explain what object-oriented programming is.",
+      "expected_keywords": ["objects", "classes", "encapsulation", "inheritance", "polymorphism", "abstraction"],
+      "ideal_answer_length": 150
+    },
+    {
+      "role": "sde",
+      "difficulty": "easy",
+      "question_text": "What is the difference between a compiler and an interpreter?",
+      "expected_keywords": ["translate", "execute", "machine code", "line by line", "compilation", "runtime"],
+      "ideal_answer_length": 130
+    },
+    {
+      "role": "sde",
+      "difficulty": "easy",
+      "question_text": "What is recursion and when would you use it?",
+      "expected_keywords": ["function", "calls itself", "base case", "stack", "tree", "factorial"],
+      "ideal_answer_length": 140
+    },
+    {
+      "role": "sde",
+      "difficulty": "easy",
+      "question_text": "Explain the concept of time complexity in algorithms.",
+      "expected_keywords": ["Big O", "efficiency", "operations", "input size", "growth", "performance"],
+      "ideal_answer_length": 140
+    },
+    {
+      "role": "sde",
+      "difficulty": "easy",
+      "question_text": "What is a database index and why is it useful?",
+      "expected_keywords": ["speed", "lookup", "query", "performance", "B-tree", "search"],
+      "ideal_answer_length": 130
+    },
+    {
+      "role": "sde",
+      "difficulty": "easy",
+      "question_text": "Describe the difference between SQL and NoSQL databases.",
+      "expected_keywords": ["relational", "schema", "flexible", "documents", "tables", "scalability"],
+      "ideal_answer_length": 150
+    },
+    {
+      "role": "sde",
+      "difficulty": "easy",
+      "question_text": "What is a RESTful API?",
+      "expected_keywords": ["stateless", "HTTP", "resources", "endpoints", "CRUD", "JSON"],
+      "ideal_answer_length": 130
+    },
+    {
+      "role": "sde",
+      "difficulty": "medium",
+      "question_text": "Explain the SOLID principles in object-oriented design.",
+      "expected_keywords": ["single responsibility", "open closed", "liskov", "interface segregation", "dependency inversion"],
+      "ideal_answer_length": 200
+    },
+    {
+      "role": "sde",
+      "difficulty": "medium",
+      "question_text": "How would you design a URL shortening service like bit.ly?",
+      "expected_keywords": ["hash", "database", "redirect", "unique ID", "scalability", "collision"],
+      "ideal_answer_length": 250
+    },
+    {
+      "role": "sde",
+      "difficulty": "medium",
+      "question_text": "What is the difference between concurrency and parallelism?",
+      "expected_keywords": ["simultaneous", "threads", "cores", "interleaving", "execution", "CPU"],
+      "ideal_answer_length": 180
+    },
+    {
+      "role": "sde",
+      "difficulty": "medium",
+      "question_text": "Explain how a hash table works and its average time complexity.",
+      "expected_keywords": ["key-value", "hash function", "collision", "O(1)", "bucket", "chaining"],
+      "ideal_answer_length": 180
+    },
+    {
+      "role": "sde",
+      "difficulty": "medium",
+      "question_text": "What is dependency injection and why is it useful?",
+      "expected_keywords": ["loose coupling", "testability", "inversion of control", "constructor", "interface", "mock"],
+      "ideal_answer_length": 170
+    },
+    {
+      "role": "sde",
+      "difficulty": "medium",
+      "question_text": "Describe the differences between microservices and monolithic architecture.",
+      "expected_keywords": ["scalability", "deployment", "independence", "communication", "complexity", "services"],
+      "ideal_answer_length": 200
+    },
+    {
+      "role": "sde",
+      "difficulty": "medium",
+      "question_text": "How does garbage collection work in programming languages?",
+      "expected_keywords": ["memory", "automatic", "reference counting", "mark and sweep", "heap", "unreachable"],
+      "ideal_answer_length": 180
+    },
+    {
+      "role": "sde",
+      "difficulty": "medium",
+      "question_text": "What is a deadlock and how can you prevent it?",
+      "expected_keywords": ["circular wait", "resources", "lock ordering", "timeout", "mutual exclusion", "prevention"],
+      "ideal_answer_length": 180
+    },
+    {
+      "role": "sde",
+      "difficulty": "medium",
+      "question_text": "Explain the concept of database normalization.",
+      "expected_keywords": ["redundancy", "normal forms", "1NF", "2NF", "3NF", "dependencies"],
+      "ideal_answer_length": 180
+    },
+    {
+      "role": "sde",
+      "difficulty": "medium",
+      "question_text": "What is caching and what caching strategies do you know?",
+      "expected_keywords": ["performance", "memory", "LRU", "TTL", "invalidation", "write-through"],
+      "ideal_answer_length": 180
+    },
+    {
+      "role": "sde",
+      "difficulty": "medium",
+      "question_text": "How would you implement rate limiting in an API?",
+      "expected_keywords": ["token bucket", "sliding window", "requests per second", "throttling", "429", "quota"],
+      "ideal_answer_length": 180
+    },
+    {
+      "role": "sde",
+      "difficulty": "medium",
+      "question_text": "Explain the CAP theorem in distributed systems.",
+      "expected_keywords": ["consistency", "availability", "partition tolerance", "trade-off", "distributed", "network"],
+      "ideal_answer_length": 180
+    },
+    {
+      "role": "sde",
+      "difficulty": "medium",
+      "question_text": "What is the difference between authentication and authorization?",
+      "expected_keywords": ["identity", "permissions", "who you are", "what you can do", "tokens", "roles"],
+      "ideal_answer_length": 150
+    },
+    {
+      "role": "sde",
+      "difficulty": "medium",
+      "question_text": "How do you handle database migrations in a production environment?",
+      "expected_keywords": ["versioning", "rollback", "backward compatible", "zero downtime", "testing", "scripts"],
+      "ideal_answer_length": 180
+    },
+    {
+      "role": "sde",
+      "difficulty": "medium",
+      "question_text": "What is event-driven architecture?",
+      "expected_keywords": ["events", "publishers", "subscribers", "decoupling", "async", "message queue"],
+      "ideal_answer_length": 170
+    },
+    {
+      "role": "sde",
+      "difficulty": "hard",
+      "question_text": "Design a distributed cache system like Redis.",
+      "expected_keywords": ["partitioning", "replication", "consistency", "eviction", "cluster", "failover"],
+      "ideal_answer_length": 300
+    },
+    {
+      "role": "sde",
+      "difficulty": "hard",
+      "question_text": "How would you design a real-time collaborative document editor like Google Docs?",
+      "expected_keywords": ["operational transformation", "CRDT", "conflict resolution", "websockets", "cursor", "synchronization"],
+      "ideal_answer_length": 300
+    },
+    {
+      "role": "sde",
+      "difficulty": "hard",
+      "question_text": "Explain how you would build a distributed task queue system.",
+      "expected_keywords": ["workers", "priority", "retry", "dead letter", "acknowledgment", "scaling"],
+      "ideal_answer_length": 280
+    },
+    {
+      "role": "sde",
+      "difficulty": "hard",
+      "question_text": "How does consensus work in distributed systems? Explain Raft or Paxos.",
+      "expected_keywords": ["leader election", "log replication", "majority", "term", "commit", "fault tolerance"],
+      "ideal_answer_length": 300
+    },
+    {
+      "role": "sde",
+      "difficulty": "hard",
+      "question_text": "Design a system to handle millions of concurrent WebSocket connections.",
+      "expected_keywords": ["horizontal scaling", "load balancing", "connection pooling", "heartbeat", "sticky sessions", "pub/sub"],
+      "ideal_answer_length": 280
+    },
+    {
+      "role": "sde",
+      "difficulty": "hard",
+      "question_text": "How would you implement a distributed transaction across multiple services?",
+      "expected_keywords": ["saga pattern", "two-phase commit", "compensation", "eventual consistency", "orchestration", "choreography"],
+      "ideal_answer_length": 280
+    },
+    {
+      "role": "sde",
+      "difficulty": "hard",
+      "question_text": "Explain how database sharding works and its challenges.",
+      "expected_keywords": ["horizontal partitioning", "shard key", "cross-shard queries", "rebalancing", "consistent hashing", "hot spots"],
+      "ideal_answer_length": 280
+    },
+    {
+      "role": "sde",
+      "difficulty": "hard",
+      "question_text": "Design a search engine indexing system.",
+      "expected_keywords": ["inverted index", "crawling", "ranking", "tokenization", "relevance", "distributed"],
+      "ideal_answer_length": 300
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "easy",
+      "question_text": "What is ETL and why is it important in data engineering?",
+      "expected_keywords": ["extract", "transform", "load", "pipeline", "data warehouse", "integration"],
+      "ideal_answer_length": 140
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "easy",
+      "question_text": "Explain the difference between a data lake and a data warehouse.",
+      "expected_keywords": ["structured", "unstructured", "schema", "raw data", "analytics", "storage"],
+      "ideal_answer_length": 150
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "easy",
+      "question_text": "What is Apache Spark and when would you use it?",
+      "expected_keywords": ["distributed", "processing", "big data", "in-memory", "batch", "streaming"],
+      "ideal_answer_length": 140
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "easy",
+      "question_text": "What is a data pipeline?",
+      "expected_keywords": ["flow", "processing", "stages", "automation", "source", "destination"],
+      "ideal_answer_length": 130
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "easy",
+      "question_text": "Explain what partitioning means in the context of big data.",
+      "expected_keywords": ["divide", "parallel", "performance", "keys", "distribution", "storage"],
+      "ideal_answer_length": 140
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "easy",
+      "question_text": "What is the difference between batch processing and stream processing?",
+      "expected_keywords": ["real-time", "scheduled", "latency", "volume", "continuous", "bounded"],
+      "ideal_answer_length": 150
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "easy",
+      "question_text": "What is Apache Kafka used for?",
+      "expected_keywords": ["messaging", "streaming", "pub/sub", "distributed", "events", "real-time"],
+      "ideal_answer_length": 130
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "easy",
+      "question_text": "Explain what a schema is in the context of databases.",
+      "expected_keywords": ["structure", "tables", "columns", "data types", "relationships", "definition"],
+      "ideal_answer_length": 130
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "easy",
+      "question_text": "What is data quality and why does it matter?",
+      "expected_keywords": ["accuracy", "completeness", "consistency", "validity", "timeliness", "trust"],
+      "ideal_answer_length": 140
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "easy",
+      "question_text": "What is the purpose of data validation in pipelines?",
+      "expected_keywords": ["correctness", "checks", "constraints", "errors", "quality", "integrity"],
+      "ideal_answer_length": 130
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "easy",
+      "question_text": "Describe what Apache Airflow does.",
+      "expected_keywords": ["orchestration", "DAG", "scheduling", "workflows", "tasks", "dependencies"],
+      "ideal_answer_length": 140
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "easy",
+      "question_text": "What is a primary key in a database?",
+      "expected_keywords": ["unique", "identifier", "constraint", "row", "not null", "index"],
+      "ideal_answer_length": 120
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "medium",
+      "question_text": "How would you design a data pipeline that processes 10TB of data daily?",
+      "expected_keywords": ["partitioning", "parallel", "incremental", "checkpointing", "monitoring", "scalability"],
+      "ideal_answer_length": 220
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "medium",
+      "question_text": "Explain the concept of slowly changing dimensions (SCD).",
+      "expected_keywords": ["Type 1", "Type 2", "history", "versioning", "dimension tables", "tracking"],
+      "ideal_answer_length": 200
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "medium",
+      "question_text": "What are the differences between star schema and snowflake schema?",
+      "expected_keywords": ["denormalized", "normalized", "fact table", "dimension", "joins", "performance"],
+      "ideal_answer_length": 180
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "medium",
+      "question_text": "How do you handle data skew in distributed processing?",
+      "expected_keywords": ["salting", "repartition", "broadcast", "keys", "imbalance", "performance"],
+      "ideal_answer_length": 200
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "medium",
+      "question_text": "Explain exactly-once semantics in stream processing.",
+      "expected_keywords": ["idempotent", "transactions", "checkpointing", "offset", "deduplication", "guarantee"],
+      "ideal_answer_length": 200
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "medium",
+      "question_text": "What is data lineage and why is it important?",
+      "expected_keywords": ["tracking", "origin", "transformations", "debugging", "compliance", "impact analysis"],
+      "ideal_answer_length": 180
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "medium",
+      "question_text": "How would you implement data deduplication at scale?",
+      "expected_keywords": ["hashing", "bloom filter", "window", "keys", "partitioning", "comparison"],
+      "ideal_answer_length": 200
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "medium",
+      "question_text": "Explain the Lambda architecture for big data processing.",
+      "expected_keywords": ["batch layer", "speed layer", "serving layer", "real-time", "historical", "views"],
+      "ideal_answer_length": 200
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "medium",
+      "question_text": "What strategies would you use for handling late-arriving data?",
+      "expected_keywords": ["watermarks", "windowing", "allowed lateness", "side outputs", "reprocessing", "timestamps"],
+      "ideal_answer_length": 200
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "medium",
+      "question_text": "How do you monitor and alert on data pipeline health?",
+      "expected_keywords": ["metrics", "SLA", "latency", "freshness", "volume", "anomaly detection"],
+      "ideal_answer_length": 180
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "medium",
+      "question_text": "Explain columnar storage formats like Parquet or ORC.",
+      "expected_keywords": ["compression", "predicate pushdown", "column pruning", "encoding", "analytics", "efficiency"],
+      "ideal_answer_length": 180
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "medium",
+      "question_text": "What is a CDC (Change Data Capture) and how does it work?",
+      "expected_keywords": ["logs", "changes", "real-time", "sync", "database", "events"],
+      "ideal_answer_length": 180
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "medium",
+      "question_text": "How would you version control data schemas?",
+      "expected_keywords": ["schema registry", "evolution", "compatibility", "migrations", "backward", "forward"],
+      "ideal_answer_length": 180
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "medium",
+      "question_text": "Explain data partitioning strategies in data warehouses.",
+      "expected_keywords": ["range", "hash", "list", "time-based", "pruning", "performance"],
+      "ideal_answer_length": 180
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "medium",
+      "question_text": "What is the difference between OLTP and OLAP systems?",
+      "expected_keywords": ["transactions", "analytics", "normalized", "denormalized", "real-time", "aggregations"],
+      "ideal_answer_length": 170
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "hard",
+      "question_text": "Design a real-time data platform that handles 1 million events per second.",
+      "expected_keywords": ["Kafka", "partitioning", "consumers", "backpressure", "exactly-once", "horizontal scaling"],
+      "ideal_answer_length": 300
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "hard",
+      "question_text": "How would you implement a data mesh architecture?",
+      "expected_keywords": ["domain ownership", "data products", "self-serve", "federated governance", "interoperability", "decentralized"],
+      "ideal_answer_length": 300
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "hard",
+      "question_text": "Explain how you would build a feature store for machine learning.",
+      "expected_keywords": ["online", "offline", "serving", "training", "consistency", "versioning", "low latency"],
+      "ideal_answer_length": 280
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "hard",
+      "question_text": "Design a system for handling PII data with compliance requirements.",
+      "expected_keywords": ["encryption", "masking", "access control", "audit", "GDPR", "retention", "tokenization"],
+      "ideal_answer_length": 280
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "hard",
+      "question_text": "How would you implement incremental processing for a petabyte-scale data lake?",
+      "expected_keywords": ["Delta Lake", "Iceberg", "upserts", "time travel", "compaction", "metadata"],
+      "ideal_answer_length": 280
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "hard",
+      "question_text": "Explain the challenges and solutions for cross-region data replication.",
+      "expected_keywords": ["latency", "consistency", "conflict resolution", "bandwidth", "compliance", "active-active"],
+      "ideal_answer_length": 280
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "hard",
+      "question_text": "Design a unified batch and streaming data architecture.",
+      "expected_keywords": ["Kappa", "unified model", "Apache Beam", "reprocessing", "exactly-once", "state management"],
+      "ideal_answer_length": 280
+    },
+    {
+      "role": "data_engineer",
+      "difficulty": "hard",
+      "question_text": "How would you optimize query performance in a distributed data warehouse?",
+      "expected_keywords": ["materialized views", "clustering", "caching", "statistics", "query planning", "indexing"],
+      "ideal_answer_length": 280
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "easy",
+      "question_text": "What is cloud computing and what are its main benefits?",
+      "expected_keywords": ["on-demand", "scalability", "cost", "elasticity", "managed", "availability"],
+      "ideal_answer_length": 140
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "easy",
+      "question_text": "Explain the difference between IaaS, PaaS, and SaaS.",
+      "expected_keywords": ["infrastructure", "platform", "software", "managed", "control", "responsibility"],
+      "ideal_answer_length": 150
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "easy",
+      "question_text": "What is a Virtual Private Cloud (VPC)?",
+      "expected_keywords": ["isolated", "network", "subnets", "security", "private", "IP addresses"],
+      "ideal_answer_length": 130
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "easy",
+      "question_text": "What is the purpose of a load balancer?",
+      "expected_keywords": ["distribute", "traffic", "availability", "health checks", "scaling", "servers"],
+      "ideal_answer_length": 130
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "easy",
+      "question_text": "Explain what containerization is and why it is useful.",
+      "expected_keywords": ["Docker", "isolation", "portable", "lightweight", "consistent", "microservices"],
+      "ideal_answer_length": 140
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "easy",
+      "question_text": "What is Infrastructure as Code (IaC)?",
+      "expected_keywords": ["automation", "Terraform", "reproducible", "version control", "declarative", "provisioning"],
+      "ideal_answer_length": 140
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "easy",
+      "question_text": "What is the difference between horizontal and vertical scaling?",
+      "expected_keywords": ["instances", "resources", "scale out", "scale up", "CPU", "memory"],
+      "ideal_answer_length": 140
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "easy",
+      "question_text": "What is an availability zone in cloud computing?",
+      "expected_keywords": ["data center", "region", "redundancy", "fault tolerance", "isolated", "geographic"],
+      "ideal_answer_length": 130
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "easy",
+      "question_text": "Explain what object storage is and give an example.",
+      "expected_keywords": ["S3", "blobs", "unstructured", "scalable", "metadata", "buckets"],
+      "ideal_answer_length": 130
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "easy",
+      "question_text": "What is a CDN and what problem does it solve?",
+      "expected_keywords": ["content delivery", "caching", "latency", "edge", "performance", "distribution"],
+      "ideal_answer_length": 130
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "easy",
+      "question_text": "What is serverless computing?",
+      "expected_keywords": ["functions", "event-driven", "no servers", "pay per use", "Lambda", "scaling"],
+      "ideal_answer_length": 130
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "easy",
+      "question_text": "Explain the shared responsibility model in cloud security.",
+      "expected_keywords": ["provider", "customer", "infrastructure", "data", "access", "compliance"],
+      "ideal_answer_length": 140
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "medium",
+      "question_text": "How would you design a highly available web application architecture?",
+      "expected_keywords": ["multi-AZ", "load balancer", "auto-scaling", "database replication", "health checks", "failover"],
+      "ideal_answer_length": 220
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "medium",
+      "question_text": "Explain how Kubernetes manages container orchestration.",
+      "expected_keywords": ["pods", "services", "deployments", "scheduler", "nodes", "replica sets"],
+      "ideal_answer_length": 200
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "medium",
+      "question_text": "What is service mesh and when would you use it?",
+      "expected_keywords": ["Istio", "sidecar", "traffic management", "observability", "security", "microservices"],
+      "ideal_answer_length": 200
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "medium",
+      "question_text": "How do you implement zero-trust security in the cloud?",
+      "expected_keywords": ["identity", "least privilege", "verify", "network segmentation", "MFA", "encryption"],
+      "ideal_answer_length": 200
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "medium",
+      "question_text": "Explain blue-green deployment and its benefits.",
+      "expected_keywords": ["zero downtime", "rollback", "parallel environments", "traffic switching", "testing", "risk reduction"],
+      "ideal_answer_length": 180
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "medium",
+      "question_text": "How would you implement disaster recovery for a cloud application?",
+      "expected_keywords": ["RTO", "RPO", "backup", "replication", "multi-region", "failover"],
+      "ideal_answer_length": 200
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "medium",
+      "question_text": "What strategies would you use to optimize cloud costs?",
+      "expected_keywords": ["reserved instances", "spot instances", "right-sizing", "auto-scaling", "monitoring", "unused resources"],
+      "ideal_answer_length": 200
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "medium",
+      "question_text": "Explain how you would set up a CI/CD pipeline in the cloud.",
+      "expected_keywords": ["source control", "build", "test", "deploy", "automation", "stages"],
+      "ideal_answer_length": 200
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "medium",
+      "question_text": "What is the difference between secrets management and configuration management?",
+      "expected_keywords": ["sensitive", "encryption", "rotation", "environment variables", "vault", "access control"],
+      "ideal_answer_length": 180
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "medium",
+      "question_text": "How do you implement network security in a cloud environment?",
+      "expected_keywords": ["security groups", "NACLs", "firewall", "private subnets", "VPN", "WAF"],
+      "ideal_answer_length": 200
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "medium",
+      "question_text": "Explain the concept of immutable infrastructure.",
+      "expected_keywords": ["replace", "rebuild", "consistency", "no patches", "automation", "containers"],
+      "ideal_answer_length": 180
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "medium",
+      "question_text": "How would you monitor and observe a distributed cloud application?",
+      "expected_keywords": ["metrics", "logs", "traces", "alerting", "dashboards", "APM"],
+      "ideal_answer_length": 200
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "medium",
+      "question_text": "What is GitOps and how does it work?",
+      "expected_keywords": ["Git", "declarative", "automation", "pull-based", "reconciliation", "version control"],
+      "ideal_answer_length": 180
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "medium",
+      "question_text": "Explain how auto-scaling works and its key metrics.",
+      "expected_keywords": ["CPU", "memory", "custom metrics", "scale out", "scale in", "thresholds"],
+      "ideal_answer_length": 180
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "medium",
+      "question_text": "How do you handle stateful applications in Kubernetes?",
+      "expected_keywords": ["StatefulSets", "persistent volumes", "storage classes", "headless services", "ordering", "identity"],
+      "ideal_answer_length": 200
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "hard",
+      "question_text": "Design a multi-region active-active architecture for a global application.",
+      "expected_keywords": ["global load balancer", "data replication", "conflict resolution", "latency", "consistency", "failover"],
+      "ideal_answer_length": 300
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "hard",
+      "question_text": "How would you implement a platform engineering solution for multiple development teams?",
+      "expected_keywords": ["internal developer platform", "self-service", "golden paths", "guardrails", "automation", "templates"],
+      "ideal_answer_length": 300
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "hard",
+      "question_text": "Explain how you would migrate a legacy monolith to microservices on the cloud.",
+      "expected_keywords": ["strangler pattern", "decomposition", "API gateway", "data migration", "testing", "incremental"],
+      "ideal_answer_length": 300
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "hard",
+      "question_text": "Design a secure multi-tenant SaaS architecture.",
+      "expected_keywords": ["isolation", "data segregation", "noisy neighbor", "authentication", "billing", "customization"],
+      "ideal_answer_length": 300
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "hard",
+      "question_text": "How would you implement chaos engineering practices?",
+      "expected_keywords": ["failure injection", "blast radius", "steady state", "hypothesis", "game days", "resilience"],
+      "ideal_answer_length": 280
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "hard",
+      "question_text": "Design a hybrid cloud architecture connecting on-premises to public cloud.",
+      "expected_keywords": ["VPN", "Direct Connect", "identity federation", "data sync", "latency", "security"],
+      "ideal_answer_length": 280
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "hard",
+      "question_text": "How would you implement a cloud-native security operations center (SOC)?",
+      "expected_keywords": ["SIEM", "threat detection", "automation", "incident response", "compliance", "logging"],
+      "ideal_answer_length": 280
+    },
+    {
+      "role": "cloud_engineer",
+      "difficulty": "hard",
+      "question_text": "Explain how you would design a FinOps practice for a large organization.",
+      "expected_keywords": ["visibility", "allocation", "optimization", "governance", "forecasting", "accountability"],
+      "ideal_answer_length": 280
+    }
+  ]
+}
